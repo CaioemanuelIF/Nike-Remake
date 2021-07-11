@@ -190,6 +190,7 @@ body {
 
 .fl-122section{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: auto;
@@ -229,7 +230,13 @@ body {
 /*------------------------------------fl-122-2-section---------------------------------------*/
 
 .fl-122-2-section{
-    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    opacity: 0.8;
+    background-image:  radial-gradient(#585858 0.5px, transparent 0.5px), radial-gradient(#585858 0.5px, #000000 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
     width: auto;
     height: 1000px;
 }
@@ -373,6 +380,7 @@ figure.effect-honey:hover h2 i {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+
 /*---------------2-card-------------------------------------*/
 figure.effect-honey2 {
 	background: #09070a;
@@ -433,7 +441,105 @@ figure.effect-honey2:hover h2 i {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+/*---------------------------------products-card-carrousel---------------------------------------*/
 
+
+#container {
+    height: 400px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid ;
+    place-items: center;
+  }
+  
+  #slider-container {
+    height: 300px;
+    width: 85vw;
+    background: #d4d4d4;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  #slider-container .btn {
+    position: absolute;
+    top: calc(50% - 30px);
+    height: 30px;
+    width: 30px;
+    border-left: 8px solid rgb(255, 255, 255);
+    border-top: 8px solid rgb(255, 255, 255);
+  }
+  
+  #slider-container .btn:hover {
+    transform: scale(1.2);
+  }
+  
+  #slider-container .btn.inactive {
+    border-color: rgb(153, 121, 126)
+  }
+  
+  #slider-container .btn:first-of-type {
+    transform: rotate(-45deg);
+    left: 10px
+  }
+  
+  #slider-container .btn:last-of-type {
+    transform: rotate(135deg);
+    right: 10px;
+  }
+  
+  #slider-container #slider {
+    display: flex;
+    width: 1000%;
+    height: 100%; 
+    transition: all .5s;
+  }
+  
+  #slider-container #slider .slide {
+    height: 90%;
+    margin: auto 10px;
+    background-color: #a847a4;
+    display: grid;
+    place-items: center;
+  }
+  
+  #slider-container #slider .slide span {
+    color: white;
+    font-size: 150px;
+  }
+  
+  @media only screen and (min-width: 1100px) {
+  
+    #slider-container #slider .slide {
+      width: calc(2.5% - 20px);
+    }
+  
+  }
+  
+  @media only screen and (max-width: 1100px) {
+  
+    #slider-container #slider .slide {
+      width: calc(3.3333333% - 20px);
+    }
+  
+  }
+  
+  @media only screen and (max-width: 900px) {
+  
+    #slider-container #slider .slide {
+      width: calc(5% - 20px);
+    }
+  
+  }
+  
+  @media only screen and (max-width: 550px) {
+  
+    #slider-container #slider .slide {
+      width: calc(10% - 20px);
+    }
+  
+  }
 /*------------------------------------fl-133section---------------------------------------*/
 .fl-133section{
     background: linear-gradient(100deg, rgba(251,236,250,1) 0%, rgba(246,228,254,1) 100%);
@@ -448,10 +554,9 @@ figure.effect-honey2:hover h2 i {
 .banner{
     background-color: #242323;
     width: auto;
-    margin: 90px 50px;
+    margin: 0px 50px;
     height: 500px;
     text-align: center;
-    padding: 40px 4%;
     font-family: roboto;
     color: rgb(20,20,20);
 
