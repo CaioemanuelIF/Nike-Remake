@@ -322,7 +322,7 @@ body {
 }
 /*-------*/
 figure.effect-honey {
-	background: #09070a;
+	background: #000000;
 }
 
 figure.effect-honey img {
@@ -332,7 +332,7 @@ figure.effect-honey img {
 }
 
 figure.effect-honey:hover img {
-	opacity: 0.5;
+	opacity: 0.1;
 }
 
 figure.effect-honey figcaption::before {
@@ -393,7 +393,7 @@ figure.effect-honey2 img {
 }
 
 figure.effect-honey2:hover img {
-	opacity: 0.5;
+	opacity: 0.1;
 }
 
 figure.effect-honey2 figcaption::before {
@@ -454,12 +454,12 @@ figure.effect-honey2:hover h2 i {
   }
   
   #slider-container {
-    height: 300px;
-    width: 85vw;
-    background: #d4d4d4;
+    height: 425px;
+    width: 90vw;
     position: relative;
     overflow: hidden;
     padding: 20px;
+    border-radius: 20px;
   }
   
   #slider-container .btn {
@@ -467,8 +467,10 @@ figure.effect-honey2:hover h2 i {
     top: calc(50% - 30px);
     height: 30px;
     width: 30px;
-    border-left: 8px solid rgb(255, 255, 255);
-    border-top: 8px solid rgb(255, 255, 255);
+    border-left: 8px solid rgb(138, 138, 138);
+    border-top: 8px solid rgb(138, 138, 138);
+    cursor: pointer;
+    border-radius: 10px;
   }
   
   #slider-container .btn:hover {
@@ -476,7 +478,7 @@ figure.effect-honey2:hover h2 i {
   }
   
   #slider-container .btn.inactive {
-    border-color: rgb(153, 121, 126)
+    border-color: rgb(138, 138, 138);
   }
   
   #slider-container .btn:first-of-type {
@@ -488,7 +490,56 @@ figure.effect-honey2:hover h2 i {
     transform: rotate(135deg);
     right: 10px;
   }
-  
+
+  #slider-container #slider img{
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 1s;
+  }
+
+  #slider-container #slider img:hover{
+    width: 120%;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 15px 13px rgba(0,0,0,0.35); 
+    box-shadow: 0px 0px 15px 13px rgba(0,0,0,0.35);
+  }
+/*--------------------------------------------*/
+.boxcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+    z-index: 10;
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+    overflow: hidden;
+    transition: all 1s ease 0s;
+    user-select: none;
+}
+ .slide:hover .boxcontent{
+    user-select: none;
+    opacity: 1;
+    height: 90px;
+}
+
+.color h3{
+    font-size: 20px;
+}
+.slide .buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    background-color: #000000;
+}
+.slide .buy a {
+    font-weight: bold;
+    color: white;
+}
+/*--------------------------------------------*/
   #slider-container #slider {
     display: flex;
     width: 1000%;
@@ -497,18 +548,14 @@ figure.effect-honey2:hover h2 i {
   }
   
   #slider-container #slider .slide {
-    height: 90%;
     margin: auto 10px;
-    background-color: #a847a4;
-    display: grid;
+    display: flex;
     place-items: center;
+    justify-content: center;
+    align-items: flex-end;
   }
   
-  #slider-container #slider .slide span {
-    color: white;
-    font-size: 150px;
-  }
-  
+
   @media only screen and (min-width: 1100px) {
   
     #slider-container #slider .slide {
@@ -542,7 +589,8 @@ figure.effect-honey2:hover h2 i {
   }
 /*------------------------------------fl-133section---------------------------------------*/
 .fl-133section{
-    background: linear-gradient(100deg, rgba(251,236,250,1) 0%, rgba(246,228,254,1) 100%);
+    background: rgb(255,227,253);
+    background: linear-gradient(109deg, rgba(255,227,253,1) 0%, rgba(106,149,212,1) 100%);  
     width: auto;
     height: 5450px;
 }
@@ -581,6 +629,8 @@ figure.effect-honey2:hover h2 i {
     height: 400px;
 }
 .card1 button{
+    margin-top: 320px;
+    margin-left: 20px;
     position: absolute;
     height: 50px;
     width: 90px;
@@ -596,14 +646,21 @@ figure.effect-honey2:hover h2 i {
 .card1 button:hover{
     background-color: #272727;
 }
+.card1{
+    -webkit-box-shadow: 0px 21px 9px -6px rgba(0,0,0,0.36); 
+    box-shadow: 0px 21px 9px -6px rgba(0,0,0,0.36);
+}
 
 .card1 img{
     background-size: cover;
     height: 100%;
 }
+
 /*------*/
 .card2 button{
     position: absolute;
+    margin-top: 320px;
+    margin-left: 20px;
     height: 50px;
     width: 90px;
     border-radius: 40px;
@@ -618,7 +675,10 @@ figure.effect-honey2:hover h2 i {
 .card2 button:hover{
     background-color: #272727;
 }
-
+.card2{
+    -webkit-box-shadow: 0px 21px 9px -6px rgba(0,0,0,0.36); 
+    box-shadow: 0px 21px 9px -6px rgba(0,0,0,0.36);
+}
 .card2 img{
     background-size: cover;
     height: 100%;
