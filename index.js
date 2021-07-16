@@ -79,3 +79,8 @@ function slideLeft() {
         buttons[0].classList.remove('inactive');
     }
 };
+
+var container = document.getElementById('menu');
+var slider = document.getElementById('categories-list');
+var slides = document.getElementsByClassName('pre-desktop-menu bg-black');
+var dropdownMenu = document.getElementsByClassName('pre-columns');

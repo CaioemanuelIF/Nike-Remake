@@ -3,7 +3,8 @@
     padding: 0;
     border: 0;
 }
-body {
+body, html {
+    -webkit-font-smoothing: antialiased;
     font-family: 'Montserrat', sans-serif;
 }
     ul, ol, li, a{
@@ -40,10 +41,8 @@ body {
     background-color: #242323;
 }
 .superior-Links-cl13 {
-    position: absolute;
     left:80%;
     margin-right: 30px;
-    padding: 0 20px 0px 20px;
     color: rgb(139, 139, 139);
 }
 .superior-Links-cl13 a{
@@ -53,39 +52,6 @@ body {
 }
 .superior-Links-cl13 a:hover{
     color: rgb(228, 228, 228);
-}
-/*---------------------------------------------Mid Superior --------------------------------------------------*/
-
-.mid-superior-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: block;
-    height: 20px;
-    width: 970px;
-    overflow: hidden;
-    position: relative;
-}
-
-.text-mid-superior{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 390px;
-    color: white;
-    animation: marquee2 4s linear infinite;
-}
-
-@keyframes marquee2 {
-
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
 }
 /*----------------------------------------fl-111section-------------------------------------------------*/
 
@@ -125,6 +91,7 @@ body {
 /*---------------------------------------Cabeçalho Meio------------------------------------------*/
 
 .list-options{
+    position: relative;
     display: flex;
     align-items: center;
     width: calc(100% - 426px);
@@ -139,7 +106,7 @@ body {
     align-items: center;
 }
 .list-options a{
-    padding: 0 10px;
+    padding: 6px 10px;
     color: white;
 }
 .list-options a:hover{
@@ -147,81 +114,76 @@ body {
     border-bottom: 1.5px solid rgb(255, 255, 255);
 }
 /*-----------------------------------------------------------*/
-#menu {
-	width:940px;
-	margin:30px auto 20px;
-	height:43px;
-	list-style-type:none;
-    display: flex;
-    justify-content: center;
+.p10-sm {
+    padding: 40px;
 }
-#menu li {
-	float:left;
-	position:relative; /* Importante para posicionar o conteúdo do dropdown*/
-	height:33px;
+.pt4-sm {
+    padding-top: 16px;
 }
-#menu li:hover {
-	background: #f5f5f5;
+.ncss-container {
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
 }
-#menu li a {
-	font-size:14px; 
-	display:block; /* Importante para manter visivel a imagem da 'seta' */
-	text-decoration:none;
+.ncss-row:after, .ncss-row:before {
+    content: "";
+    display: table;
 }
-#menu li:hover a {
-	color:#161616;
+#categories-list{
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+    max-height: 800px;
+    top: 60px;
+    left: 0;
+    right: 0;
+    transition: transform .1s ease,opacity 0ms linear .1s,visibility 0ms linear .1s;
+    transform-origin: top center;
+    transform: scaleY(0);
 }
-
-#menu li .columns {
-	position:absolute; /* Importante para posicionar o conteúdo do dropdown */
-	left:-9999px; /* Esconde o dropdown quando o mouse não está em cima do link */
-	padding:10px 4px 10px 20px;
-	border-top:none;
-	background:#F4F4F4;
-	width: 100%;
+.desktop-menu a:hover #categories-list::after{
+    
 }
-
-#menu li:hover .columns{
-	left:0;
+.bg-black{
+    background-color: #09070a;
 }
-#menu ul li {
-	line-height:21px;
-	font-size:12px;
+.pre-columns{
+    max-width: 1344px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
 }
-#menu li ul.col{
-	display:inline;
-	float: left;
-	position: relative;
-	padding:0;
-	margin:0 0 12px 0;
-	width:33.33%;
+.pre-menu-column {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: transform .1s,opacity .1s;
+    transition-delay: 0s;
 }
-#menu li ul.col li {
-	margin:0 0 10px 0;
-	padding:2px 6px;
-	width:85%;
-	border-bottom:1px solid #fff;
-	list-style-type:none;
-	font-size:12px;
-	height:100%;
-	position:relative;
-	float:none;
+.va-sm-t {
+    vertical-align: top;
 }
-#menu li .col li:hover {
-	padding:2px 6px;
-	margin:0 0 10px 0;
-	border-bottom:1px solid #aaa;
+.ta-sm-l {
+    text-align: left;
 }
-#menu li .col span{
-	font-size:12px;
-	color:#333;
-	font-weight:bold;
+.pt4-sm {
+    padding-top: 16px;
 }
-#menu li .col li a{
-	font-size:12px;
-	color:#aaa;
+.ncss-col-sm-2 {
+    width: 16.666666666666664%;
+    display: inline-block;
 }
-#menu li .col li a:hover{color:#333;}
+[class*=ncss-col-] {
+    position: relative;
+    min-height: 1px;
+    display: none;
+    font-size: 16px;
+    line-height: 1.75;
+    padding-left: 8px;
+    padding-right: 8px;
+}
 /*-----------------------------------------------------------*/
 .mid-header{
     display: flex;
